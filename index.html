@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+</head>
+<body>
+
+  <div class="login-container">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+
+    <div class="remember-container" style="display: inline-block;">
+      <input type="checkbox" id="remember" onchange="updateRememberText()">
+      <label class="remember-label" for="remember">Remember me</label>
+    </div>
+
+    <button onclick="login()">Log In</button>
+    <button class="clear" onclick="clearForm()">Clear</button>
+  </div>
+
+  <script>
+    function updateRememberText() {
+      var rememberCheckbox = document.getElementById("remember");
+      var rememberLabel = document.querySelector(".remember-label");
+
+      if (rememberCheckbox.checked) {
+        rememberLabel.textContent = "Checked";
+      } else {
+        rememberLabel.textContent = "Remember me";
+      }
+    }
+
+
+  </script>
+
+</body>
+</html>
